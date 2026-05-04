@@ -24,7 +24,7 @@
 - `src/lib/types/`: shared TypeScript interfaces and types
 - `src/routes/(auth)/`: authenticated pages (dashboard, customers, leads, dealers, performance)
 - `src/routes/(public)/`: public pages (login)
-- `src/routes/api/`: SvelteKit server routes (BFF layer for Go API calls)
+- `src/routes/api/`: SvelteKit server routes (BFF layer for forward-api-java calls)
 
 ## Mandatory Patterns
 
@@ -36,7 +36,7 @@
 ### Data Flow
 - Pages (`+page.svelte`) fetch data via `+page.server.ts` or Supabase client.
 - Stores are for cross-component state only, not for data fetching.
-- Supabase SDK is the primary data source. Go API is called only for WhatsApp/webhooks.
+- Supabase SDK is the primary data source. forward-api-java (Spring Boot, REST + SOAP on port 8080) is called for SOA-scoped reads and for triggering WhatsApp/webhooks via N8N.
 
 ### i18n
 - Every user-facing string must use an i18n key.

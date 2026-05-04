@@ -43,6 +43,6 @@ src/
 
 | Repo | Purpose |
 |---|---|
-| [forward-api](https://github.com/fwd-ford/forward-api) | Go API for external integrations |
+| [forward-api-java](https://github.com/fwd-ford/forward-api-java) | Official backend — Java 17 + Spring Boot 3, REST + SOAP |
 | [forward-infra](https://github.com/fwd-ford/forward-infra) | Supabase schema and migrations |
 | [forward-docs](https://github.com/fwd-ford/forward-docs) | Documentation |
