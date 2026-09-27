@@ -1,0 +1,17 @@
+version: 2
+updates:
+  # Only GitHub Actions for now: the SvelteKit app has no package.json yet.
+  # Add the npm ecosystem here when package.json lands.
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+    # Supply-chain guard: wait a week before adopting a freshly published release.
+    cooldown:
+      default-days: 7
+    labels:
+      - dependencies
+      - github-actions
+    commit-message:
+      prefix: "chore(actions)"
